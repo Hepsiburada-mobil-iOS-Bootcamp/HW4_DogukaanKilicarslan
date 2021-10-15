@@ -169,7 +169,7 @@
 		D8E9D3E027192E5700B160CA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D8E9D3F227193B3A00B160CA /* OtherViews */,
+				D8E9D3F227193B3A00B160CA /* LoadingViews */,
 				D8E9D3E92719369800B160CA /* LongCarouselCards */,
 				D8E9D3E82719368900B160CA /* WideCarouselCards */,
 				D8E9D3F7271941B200B160CA /* MovieListView.swift */,
@@ -204,13 +204,13 @@
 			path = LongCarouselCards;
 			sourceTree = "<group>";
 		};
-		D8E9D3F227193B3A00B160CA /* OtherViews */ = {
+		D8E9D3F227193B3A00B160CA /* LoadingViews */ = {
 			isa = PBXGroup;
 			children = (
 				D8E9D3F327193B7300B160CA /* ActivityIndicatorView.swift */,
 				D8E9D3F527193BDF00B160CA /* LoadingView.swift */,
 			);
-			name = OtherViews;
+			name = LoadingViews;
 			path = "New Group";
 			sourceTree = "<group>";
 		};
