@@ -15,19 +15,22 @@ struct MovieResponse: Decodable {
 }
 
 // MARK: - Result
-struct Movie: Decodable {
+struct Movie: Decodable, Identifiable {
     
     let backdropPath: String?
-    let id: Int?
+    let id: Int
     let title: String
-    let overview: String?
+    let overview: String
     let posterPath: String?
-    let voteCount: Int?
-    let voteAverage: Double?
+    let voteCount: Int
+    let voteAverage: Double
     let runtime: Int?
     
     var backdropURL: URL {
         return URL(string: "https://image.tmdb.org/t/p/w500\(backdropPath ?? "")")!
+    }
+    var posterURL: URL {
+        return URL(string: "https://image.tmdb.org/t/p/w500\(posterPath ?? "")")!
     }
     
 }
@@ -35,24 +38,24 @@ struct Movie: Decodable {
 //MARK: - Image
 
 
-public struct ImagePoster: Codable {
-    public let path: String
-    public let imageExtension: Extension
-    
-    enum CodingKeys: String, CodingKey {
-        case path
-        case imageExtension = "extension"
-    }
-}
-
-public enum Extension: String, Codable {
-    case gif = "gif"
-    case jpg = "jpg"
-    case unknown = "unknown"
-}
-
-extension Extension {
-    public init(from decoder: Decoder) throws {
-        self = try Extension(rawValue: decoder.singleValueContainer().decode(RawValue.self)) ?? .unknown
-    }
-}
+//public struct ImagePoster: Codable {
+//    public let path: String
+//    public let imageExtension: Extension
+//    
+//    enum CodingKeys: String, CodingKey {
+//        case path
+//        case imageExtension = "extension"
+//    }
+//}
+//
+//public enum Extension: String, Codable {
+//    case gif = "gif"
+//    case jpg = "jpg"
+//    case unknown = "unknown"
+//}
+//
+//extension Extension {
+//    public init(from decoder: Decoder) throws {
+//        self = try Extension(rawValue: decoder.singleValueContainer().decode(RawValue.self)) ?? .unknown
+//    }
+//}

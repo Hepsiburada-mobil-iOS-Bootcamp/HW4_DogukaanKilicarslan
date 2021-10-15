@@ -9,7 +9,9 @@ import Foundation
 
 typealias MovieResponseCompletionBlock = (Result<MovieResponse, MovieError>) -> Void
 typealias MovieCompletionBlock = (Result<Movie, MovieError>) -> Void
+
 protocol MovieService {
+    
     //MARK: - To fetch the movie list
     func fetchMovies(from endpoint: MovieListEndPoint, completion: @escaping MovieResponseCompletionBlock)
     //MARK: - To fetch the detail of one movie
@@ -35,6 +37,16 @@ enum MovieListEndPoint: String {
         }
     }
 }
+
+//MARK: - Carousel Lists Titles
+
+enum MovieListTitle: String {
+    case nowPlaying = "Now Playing"
+    case upcoming = "Upcoming"
+    case popular = "Popular"
+    case topRated = "Top Rated"
+}
+
 
 //MARK: - Handling the errors like a *BOSS*
 

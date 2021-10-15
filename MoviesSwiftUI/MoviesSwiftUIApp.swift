@@ -11,7 +11,7 @@ import SwiftUI
 struct MoviesSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MovieWideCard(movie: Movie.dummyMovie)
         }
     }
 }
