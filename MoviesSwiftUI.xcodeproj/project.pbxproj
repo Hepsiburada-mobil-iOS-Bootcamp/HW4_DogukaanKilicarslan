@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,13 @@
 		D8E9D3552719041A00B160CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E9D3542719041A00B160CA /* ContentView.swift */; };
 		D8E9D3572719041D00B160CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8E9D3562719041D00B160CA /* Assets.xcassets */; };
 		D8E9D35A2719041D00B160CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8E9D3592719041D00B160CA /* Preview Assets.xcassets */; };
+		D8E9D3912719045A00B160CA /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E9D3682719045900B160CA /* BaseWireframe.swift */; };
+		D8E9D3922719045A00B160CA /* FormatterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E9D3692719045900B160CA /* FormatterInterface.swift */; };
+		D8E9D3932719045A00B160CA /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E9D36A2719045900B160CA /* UIStoryboardExtension.swift */; };
+		D8E9D3942719045A00B160CA /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E9D36B2719045900B160CA /* PresenterInterface.swift */; };
+		D8E9D3952719045A00B160CA /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E9D36C2719045900B160CA /* ViewInterface.swift */; };
+		D8E9D3962719045A00B160CA /* InteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E9D36D2719045900B160CA /* InteractorInterface.swift */; };
+		D8E9D3AE2719047900B160CA /* BaseComponents in Frameworks */ = {isa = PBXBuildFile; productRef = D8E9D3AD2719047900B160CA /* BaseComponents */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +27,12 @@
 		D8E9D3562719041D00B160CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8E9D3592719041D00B160CA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D8E9D35B2719041D00B160CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8E9D3682719045900B160CA /* BaseWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
+		D8E9D3692719045900B160CA /* FormatterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatterInterface.swift; sourceTree = "<group>"; };
+		D8E9D36A2719045900B160CA /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
+		D8E9D36B2719045900B160CA /* PresenterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterInterface.swift; sourceTree = "<group>"; };
+		D8E9D36C2719045900B160CA /* ViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
+		D8E9D36D2719045900B160CA /* InteractorInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorInterface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8E9D3AE2719047900B160CA /* BaseComponents in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +66,7 @@
 		D8E9D3512719041A00B160CA /* MoviesSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				D8E9D3672719045900B160CA /* Base VIPER Interfaces */,
 				D8E9D3522719041A00B160CA /* MoviesSwiftUIApp.swift */,
 				D8E9D3542719041A00B160CA /* ContentView.swift */,
 				D8E9D3562719041D00B160CA /* Assets.xcassets */,
@@ -67,6 +82,19 @@
 				D8E9D3592719041D00B160CA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D8E9D3672719045900B160CA /* Base VIPER Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				D8E9D3682719045900B160CA /* BaseWireframe.swift */,
+				D8E9D3692719045900B160CA /* FormatterInterface.swift */,
+				D8E9D36A2719045900B160CA /* UIStoryboardExtension.swift */,
+				D8E9D36B2719045900B160CA /* PresenterInterface.swift */,
+				D8E9D36C2719045900B160CA /* ViewInterface.swift */,
+				D8E9D36D2719045900B160CA /* InteractorInterface.swift */,
+			);
+			path = "Base VIPER Interfaces";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +113,9 @@
 			dependencies = (
 			);
 			name = MoviesSwiftUI;
+			packageProductDependencies = (
+				D8E9D3AD2719047900B160CA /* BaseComponents */,
+			);
 			productName = MoviesSwiftUI;
 			productReference = D8E9D34F2719041A00B160CA /* MoviesSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +143,9 @@
 				Base,
 			);
 			mainGroup = D8E9D3462719041A00B160CA;
+			packageReferences = (
+				D8E9D3AC2719047900B160CA /* XCRemoteSwiftPackageReference "BaseComponents" */,
+			);
 			productRefGroup = D8E9D3502719041A00B160CA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +172,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8E9D3962719045A00B160CA /* InteractorInterface.swift in Sources */,
+				D8E9D3922719045A00B160CA /* FormatterInterface.swift in Sources */,
 				D8E9D3552719041A00B160CA /* ContentView.swift in Sources */,
 				D8E9D3532719041A00B160CA /* MoviesSwiftUIApp.swift in Sources */,
+				D8E9D3942719045A00B160CA /* PresenterInterface.swift in Sources */,
+				D8E9D3932719045A00B160CA /* UIStoryboardExtension.swift in Sources */,
+				D8E9D3912719045A00B160CA /* BaseWireframe.swift in Sources */,
+				D8E9D3952719045A00B160CA /* ViewInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +368,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D8E9D3AC2719047900B160CA /* XCRemoteSwiftPackageReference "BaseComponents" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/darkbringer1/BaseComponents.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.18;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D8E9D3AD2719047900B160CA /* BaseComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8E9D3AC2719047900B160CA /* XCRemoteSwiftPackageReference "BaseComponents" */;
+			productName = BaseComponents;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D8E9D3472719041A00B160CA /* Project object */;
 }
